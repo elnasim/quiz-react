@@ -1,0 +1,23 @@
+.answer-page {
+  padding: 50px 0;
+  color: #ffffff;
+}
+
+.answer-page__title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+.answer-page__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-page__btn {
+  padding: 15px 20px;
+  width: 200px;
+  text-align: center;
+  text-transform: uppercase;
+}

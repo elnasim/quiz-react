@@ -1,0 +1,22 @@
+.main-page {
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.main-page__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.main-page__btn {
+  padding: 15px 20px;
+  width: 100%;
+  max-width: 200px;
+  font-weight: bold;
+  text-transform: uppercase;
+}

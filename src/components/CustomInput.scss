@@ -1,0 +1,17 @@
+.custom-input__body {
+  display: flex;
+  padding: 15px;
+  background-color: rgb(14, 14, 14);
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 10px;
+}
+
+.custom-input__checkbox {
+  display: none;
+}
+
+.custom-input__checkbox:checked + .custom-input__body {
+  background-color: orangered;
+}
