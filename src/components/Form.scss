@@ -1,0 +1,38 @@
+.form {
+  padding: 40px 0;
+}
+
+.form__title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+.form-label {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+
+.form__btn {
+  border: none;
+  max-width: 100%;
+  padding: 15px 5px;
+  width: 200px;
+  color: #ffffff;
+  margin: auto;
+  display: block;
+}
+
+.send-data {
+  color: #ffffff;
+}

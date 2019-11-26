@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import "./CustomInput.scss";
 
-export default ({ text }) => {
+export default ({ id, text, changeAnswer, isChecked }) => {
+  let style = "";
+
+  if (!isChecked) {
+    style = "custom-input__body";
+  } else {
+    style = "custom-input__body checked";
+  }
+
   return (
-    <label className="custom-input__label">
-      <input className="custom-input__checkbox" type="checkbox" value={text} />
-      <span className="custom-input__body">
-        <span className="custom-input__text">{text}</span>
-      </span>
-    </label>
+    <span className={style} onClick={() => changeAnswer(id)}>
+      <span className='custom-input__text'>{text}</span>
+    </span>
   );
 };

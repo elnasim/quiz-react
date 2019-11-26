@@ -6,12 +6,7 @@
   cursor: pointer;
   user-select: none;
   margin-bottom: 10px;
-}
-
-.custom-input__checkbox {
-  display: none;
-}
-
-.custom-input__checkbox:checked + .custom-input__body {
-  background-color: orangered;
+  &.checked {
+    background-color: orangered;
+  }
 }
