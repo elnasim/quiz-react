@@ -8,7 +8,9 @@ import Form from "./components/Form";
 function App() {
   const [data, setData] = useState(DATA);
   const [pageId, setPageId] = useState(0);
-  const [contacts, setContacts] = useState({ name: "" });
+  const [contacts, setContacts] = useState("");
+  const [showData, setShowData] = useState(false);
+  const [error, setError] = useState(false);
 
   const questions = () => {
     const id = pageId - 1;
@@ -19,6 +21,7 @@ function App() {
           nextPage={nextPage}
           prevPage={prevPage}
           changeAnswer={changeAnswer}
+          error={error}
         />
       );
     }
@@ -37,6 +40,9 @@ function App() {
     const isChecked = items.indexOf(true);
     if (isChecked !== -1) {
       setPageId(pageId + 1);
+      setError(false);
+    } else {
+      setError(true);
     }
   };
 
@@ -48,20 +54,23 @@ function App() {
     setData(changedData);
   };
 
-  const changeContacts = contacts => {
-    setContacts(contacts);
-  };
-
-  const sendData = e => {
+  const sendData = (e, value) => {
     e.preventDefault();
+    setContacts(value);
+    setShowData(true);
   };
 
   return (
-    <div className='app'>
+    <div className="app">
       {pageId === 0 && <MainPage startQuiz={startQuiz} title={data.title} />}
       {questions()}
       {pageId === data.questions.length + 1 && (
-        <Form sendData={sendData} data={data} contacts={contacts} />
+        <Form
+          sendData={sendData}
+          data={data}
+          contacts={contacts}
+          showData={showData}
+        />
       )}
     </div>
   );
